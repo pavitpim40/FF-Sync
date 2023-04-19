@@ -1,3 +1,6 @@
+// const q = document.getElementById('error');
+// console.log(q);
+
 const app = () => {
     const componentService = new ComponentService();
     const errorService = new ErrorService();
