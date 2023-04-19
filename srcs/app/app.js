@@ -7,6 +7,7 @@ const app = () => {
 
     errorService.hideError(); //*** */
 
+    // ฟังก์ชันที่ใช้คำนวนนราคา
     const calTotal = () => {
         errorService.hideError();
         const inputs = componentService.getInputs(); //*** */ ได้ array ของ input
@@ -22,6 +23,7 @@ const app = () => {
         }
     };
 
+    // object.method(callback)
     componentService.onClick(calTotal); //*** */
 };
 

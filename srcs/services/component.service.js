@@ -1,13 +1,6 @@
 // Class => Generate Object
 
 class ComponentService {
-    /*
-	{
-		priceInput : DOM-INPUT-1,
-		quantityInput : DOM-INPUT-2
-	}
-	
-	*/
     constructor() {
         this.priceInput = document.getElementById('product-price');
         this.quantityInput = document.getElementById('product-quantity');
@@ -28,6 +21,8 @@ class ComponentService {
     }
 
     onClick(callback) {
+        // ให้คนเรียกใช้ onClick ส่งฟังก์ชันมา
+        // เอาฟังก์ชันนั้นไปผูกติดกับปุ่มให้
         this.totalBtn.addEventListener('click', callback);
     }
 }
