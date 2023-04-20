@@ -2,9 +2,7 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
 const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizer = require('css-minimizer-webpack-plugin');
 
@@ -13,7 +11,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const commonConfig = require('./webpack.config');
 
 //#########################################
-const devConfig = merge(commonConfig, {
+const prodConfig = merge(commonConfig, {
     mode: 'production',
 
     output: {
@@ -33,13 +31,7 @@ const devConfig = merge(commonConfig, {
     },
 
     // PLUGIN
-    plugins: [
-        new MiniCssExtractPlugin(),
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            template: './src/template/index.html',
-        }),
-    ],
+    plugins: [new MiniCssExtractPlugin(), new CleanWebpackPlugin()],
 
     optimization: {
         minimizer: [
@@ -47,7 +39,6 @@ const devConfig = merge(commonConfig, {
             new CssMinimizer(),
             new HtmlWebpackPlugin({
                 template: './src/template/index.html',
-                filename: 'index.min.html',
                 minify: {
                     removeAttributeQuotes: true,
                     collapseWhitespace: true,
@@ -58,4 +49,4 @@ const devConfig = merge(commonConfig, {
     },
 });
 
-module.exports = devConfig;
+module.exports = prodConfig;
