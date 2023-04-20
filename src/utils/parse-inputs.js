@@ -1,6 +1,6 @@
 // UTIL-FN 1
 // "500","2","100" => [500,2,100]
-const parseInput = (...inputs) => {
+export const parseInput = (...inputs) => {
     return inputs.map((str) => Number(str));
 };
 

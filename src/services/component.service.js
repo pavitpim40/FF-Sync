@@ -1,6 +1,6 @@
 // Class => Generate Object
 
-class ComponentService {
+export class ComponentService {
     constructor() {
         this.priceInput = document.getElementById('product-price');
         this.quantityInput = document.getElementById('product-quantity');
