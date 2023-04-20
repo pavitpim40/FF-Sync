@@ -1,14 +1,9 @@
 // IMPORT : COMMON JS
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    mode: 'production',
-    entry: './src/index.js',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.[hash].js',
+    entry: {
+        main: './src/index.js',
+        vendor: './src/vendor.js',
     },
 
     // LOADER
@@ -18,18 +13,6 @@ module.exports = {
                 test: /\.html$/i,
                 loader: 'html-loader',
             },
-            {
-                test: /\.s?css$/i, // เฉพาะกับ .css .scss
-                use: ['style-loader', 'css-loader', 'sass-loader'], // ใช้ loader อะไรบ้าง
-            },
         ],
     },
-
-    // PLUGIN
-    plugins: [
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            template: './src/template/index.html',
-        }),
-    ],
 };

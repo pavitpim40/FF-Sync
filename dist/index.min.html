@@ -3,17 +3,17 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>CC-KOFF-สาขา 500</title>
+        <script defer="defer" src="main.ea9a21250d5788a76779.min.js"></script>
+        <script defer="defer" src="vendor.ea9a21250d5788a76779.min.js"></script>
+        <link href="main.css" rel="stylesheet" />
     </head>
     <body class="container bg-body-tertiary">
         <!-- #1 NAV -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <!-- Logo-grand -->
                 <a class="navbar-brand" href="#">CC-KOFF</a>
-
-                <!-- Mobile - Hamburger Menu -->
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -25,36 +25,24 @@
                 >
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <!-- DESKTOP -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Order</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Stock</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Dashboard</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Stock</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-
         <!-- #2 MAIN -->
         <main class="container text-center mt-5">
             <div class="row">
-                <!-- LEFT -->
-                <div class="col">
-                    <img src="../assets/coffee.png" />
-                </div>
-
-                <!-- RIGHT -->
+                <div class="col"><img src=images/13af7bc1db77860bbbb4.png></div>
                 <div class="col">
                     <h1 class="my-5">Ethiopia - Yirgacheffe</h1>
                     <form>
-                        <!-- FORM:ROW-1 -->
                         <div class="row mb-1">
                             <div class="col">
                                 <div class="input-group mb-3">
@@ -85,7 +73,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- FORM:ROW-2 -->
                         <div class="row mb-5">
                             <div class="col">
                                 <div class="input-group mb-3">
@@ -102,13 +89,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- ERROR-DISPLAY -->
-                        <div class="row alert alert-danger mt-5" role="alert" id="error">
-                            <!-- Error : Invalid Input -->
-                        </div>
-
-                        <!-- FORM:ROW-3 -->
+                        <div class="row alert alert-danger mt-5" role="alert" id="error"></div>
                         <div class="row">
                             <button type="button" class="btn btn-primary" id="total-btn">
                                 Total
@@ -118,7 +99,6 @@
                 </div>
             </div>
         </main>
-
         <!-- #3 TOTAL -->
         <div class="card">
             <div class="card-body">Total : <span id="result"></span></div>
