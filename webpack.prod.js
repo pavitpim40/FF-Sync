@@ -17,7 +17,7 @@ const devConfig = merge(commonConfig, {
     mode: 'production',
 
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
         filename: '[name].[hash].min.js', // .min = minify == remove all code comment and white space
         assetModuleFilename: 'images/[hash][ext][query]',
     },
